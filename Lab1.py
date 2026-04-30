@@ -71,9 +71,9 @@ print("\n5. Відбір ознак за порогом кореляції та 
 corr_matrix = df[num_cols_for_corr].corr()
 corr_with_target = corr_matrix[target].drop(target)
 
-threshold = 0.35
+threshold = 0.3
 good_corr_features = corr_with_target[corr_with_target.abs() > threshold].index.tolist()
-print("Ознаки, які мають кореляцію з цільовою змінною вище порогу (|r| > 0.35):")
+print("Ознаки, які мають кореляцію з цільовою змінною вище порогу (|r| > 0.3):")
 print(good_corr_features)
 
 corr_results = []
